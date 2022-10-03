@@ -1,3 +1,4 @@
 runtime: java11
 entrypoint: "java -jar language-tool-server-all.jar"
 service: language-tool-server
+instance_class: F2
