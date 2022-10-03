@@ -40,4 +40,4 @@ data class RuleMatchResult(
         val replacements: List<String>
 )
 
-@Serializable data class CheckResult(val text: String, val ruleMatches: List<RuleMatchResult>)
+@Serializable data class CheckResult(val text: String, val matches: List<RuleMatchResult>)
