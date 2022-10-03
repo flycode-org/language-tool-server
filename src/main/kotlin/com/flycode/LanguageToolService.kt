@@ -15,14 +15,14 @@ object LanguageToolService {
         // comment in to use statistical ngram data:
         // langTool.activateLanguageModelRules(new File("/data/google-ngram-data"));
         return CheckResult(
-            text, (langTool.check(text) ?: emptyList()).map { ruleMatch ->
-                RuleMatchResult(
-                    ruleMatch.message,
-                    ruleMatch.shortMessage,
-//                    ruleMatch.suggestedReplacements ?: emptyList(),
-                    emptyList()
-                )
-            }
+                text,
+                (langTool.check(text) ?: emptyList()).map { ruleMatch ->
+                    RuleMatchResult(
+                            ruleMatch.message,
+                            ruleMatch.shortMessage,
+                            ruleMatch.suggestedReplacements ?: emptyList(),
+                    )
+                }
         )
     }
 
@@ -31,11 +31,13 @@ object LanguageToolService {
         // langTool.activateLanguageModelRules(new File("/data/google-ngram-data"));
         return texts.map { check(it) }
     }
-
 }
 
 @Serializable
-data class RuleMatchResult(val message: String, val shortMessage: String, val replacements: List<String>)
+data class RuleMatchResult(
+        val message: String,
+        val shortMessage: String,
+        val replacements: List<String>
+)
 
-@Serializable
-data class CheckResult(val text: String, val ruleMatches: List<RuleMatchResult>)
+@Serializable data class CheckResult(val text: String, val ruleMatches: List<RuleMatchResult>)
