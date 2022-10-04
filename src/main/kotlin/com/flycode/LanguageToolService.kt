@@ -5,7 +5,7 @@ import org.languagetool.JLanguageTool
 import org.languagetool.language.AmericanEnglish
 
 object LanguageToolService {
-    val langTool = JLanguageTool(AmericanEnglish())
+    private val langTool = JLanguageTool(AmericanEnglish())
 
     fun init() {
         langTool.check("Initialize")
@@ -20,6 +20,8 @@ object LanguageToolService {
                     RuleMatchResult(
                             ruleMatch.message,
                             ruleMatch.shortMessage,
+                            ruleMatch.fromPos,
+                            ruleMatch.toPos - ruleMatch.fromPos,
                             ruleMatch.suggestedReplacements ?: emptyList(),
                     )
                 }
@@ -37,6 +39,8 @@ object LanguageToolService {
 data class RuleMatchResult(
         val message: String,
         val shortMessage: String,
+        val offset: Int,
+        val length: Int,
         val replacements: List<String>
 )
 
