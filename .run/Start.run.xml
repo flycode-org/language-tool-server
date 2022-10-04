@@ -1,0 +1,13 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Start" type="JetRunConfigurationType">
+    <envs>
+      <env name="PORT" value="7076" />
+    </envs>
+    <option name="MAIN_CLASS_NAME" value="com.flycode.ApplicationKt" />
+    <module name="language-tool-server.main" />
+    <shortenClasspath name="NONE" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
