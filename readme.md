@@ -11,9 +11,3 @@ Deploy to app engine:
 ```
 ./gradlew appEngineDeploy
 ```
-
-Deploy to Docker:
-
-```
-./gradlew publishImageToLocalRegistry
-```

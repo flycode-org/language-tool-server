@@ -24,6 +24,6 @@ fun Application.configureRouting() {
 
             call.respond(LanguageToolService.check(bulkCheckRequest.texts))
         }
-        get("/") { call.respondText("Hello World") }
+        get("/") { call.respondText("Hello World!") }
     }
 }
