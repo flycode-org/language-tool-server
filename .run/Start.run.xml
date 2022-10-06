@@ -3,7 +3,7 @@
     <envs>
       <env name="PORT" value="7076" />
     </envs>
-    <option name="MAIN_CLASS_NAME" value="com.flycode.ApplicationKt" />
+    <option name="MAIN_CLASS_NAME" value="com.flycode.languagetoolserver.ApplicationKt" />
     <module name="language-tool-server.main" />
     <shortenClasspath name="NONE" />
     <method v="2">

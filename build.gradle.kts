@@ -13,18 +13,18 @@ plugins {
     id("com.google.cloud.tools.appengine") version "2.4.2"
 }
 
-group = "com.flycode"
+group = "com.flycode.languagetoolserver"
+
 version = "0.0.1"
+
 application {
-    mainClass.set("com.flycode.ApplicationKt")
+    mainClass.set("com.flycode.languagetoolserver.ApplicationKt")
 
     val isDevelopment: Boolean = project.ext.has("development")
     applicationDefaultJvmArgs = listOf("-Dio.ktor.development=$isDevelopment")
 }
 
-repositories {
-    mavenCentral()
-}
+repositories { mavenCentral() }
 
 dependencies {
     implementation("io.ktor:ktor-server-core-jvm:$ktor_version")
@@ -42,9 +42,7 @@ dependencies {
 }
 
 configure<AppEngineAppYamlExtension> {
-    stage {
-        setArtifact("build/libs/${project.name}-all.jar")
-    }
+    stage { setArtifact("build/libs/${project.name}-all.jar") }
     deploy {
         version = "GCLOUD_CONFIG"
         projectId = "GCLOUD_CONFIG"

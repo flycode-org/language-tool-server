@@ -1,6 +1,6 @@
-package com.flycode
+package com.flycode.languagetoolserver
 
-import com.flycode.plugins.*
+import com.flycode.languagetoolserver.plugins.*
 import io.ktor.server.engine.*
 import io.ktor.server.netty.*
 

@@ -1,4 +1,4 @@
-package com.flycode
+package com.flycode.languagetoolserver
 
 import kotlinx.serialization.Serializable
 import org.languagetool.JLanguageTool

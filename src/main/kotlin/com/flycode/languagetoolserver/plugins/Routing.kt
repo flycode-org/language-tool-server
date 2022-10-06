@@ -1,6 +1,6 @@
-package com.flycode.plugins
+package com.flycode.languagetoolserver.plugins
 
-import com.flycode.LanguageToolService
+import com.flycode.languagetoolserver.LanguageToolService
 import io.ktor.server.application.*
 import io.ktor.server.request.*
 import io.ktor.server.response.*
