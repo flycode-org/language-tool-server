@@ -3,6 +3,7 @@ import com.google.cloud.tools.gradle.appengine.appyaml.AppEngineAppYamlExtension
 val ktor_version: String by project
 val kotlin_version: String by project
 val logback_version: String by project
+val v = "0.0.1"
 
 plugins {
     application
@@ -15,7 +16,7 @@ plugins {
 
 group = "com.flycode.languagetoolserver"
 
-version = "0.0.1"
+version = v
 
 application {
     mainClass.set("com.flycode.languagetoolserver.ApplicationKt")
@@ -46,5 +47,13 @@ configure<AppEngineAppYamlExtension> {
     deploy {
         version = "GCLOUD_CONFIG"
         projectId = "GCLOUD_CONFIG"
+    }
+}
+
+ktor {
+    docker {
+        localImageName.set("langauge-tool-server")
+        imageTag.set(v)
+        jreVersion.set(io.ktor.plugin.features.JreVersion.JRE_17)
     }
 }
