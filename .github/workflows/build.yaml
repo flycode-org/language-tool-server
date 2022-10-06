@@ -9,6 +9,7 @@ jobs:
       - uses: actions/setup-java@v1
         with:
           java-version: 17
-      - run: ./gradlew publishImageToLocalRegistry
-      - run: docker tag langauge-tool-server ghcr.io/flycode-org/langauge-tool-server:latest
+          cache: "gradle"
+      - run: ./gradlew --no-daemon publishImageToLocalRegistry
+      - run: docker tag langauge-tool-server:latest ghcr.io/flycode-org/langauge-tool-server:latest
       - run: docker push ghcr.io/flycode-org/langauge-tool-server:latest
