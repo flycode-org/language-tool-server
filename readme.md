@@ -2,6 +2,12 @@
 
 A JSON HTTP Server for [LanguageTool](https://languagetool.org/) with support for batching.
 
+### Running in Docker
+
+```
+docker run -p 8080:8080 ghcr.io/flycode-org/langauge-tool-server
+```
+
 ### Deployment
 
 Deploy to app engine:
