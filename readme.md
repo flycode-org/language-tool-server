@@ -177,18 +177,19 @@ Response:
 ]
 ```
 
+## Deployment
+
 ### Running in Docker
 
-```
+```bash
 docker run -p 8080:8080 ghcr.io/flycode-org/langauge-tool-server
 ```
 
-### Deployment
+### Deploy to Google App Engine:
 
-Deploy to app engine:
-
-- Make sure to set the correct Google Cloud project before deploying
-
-```
+- Clone the repository
+- Make sure to set the correct Google Cloud project before deploying with `gcloud`
+- Deploy to App Engine:
+```bash
 ./gradlew appEngineDeploy
 ```
