@@ -1,6 +1,8 @@
 # LanguageTool Server
 
-A JSON HTTP Server for [LanguageTool](https://languagetool.org/) with support for batching.
+A self-hostable server that provides a JSON API for checking spelling and grammar mistakes programmaticaly in texts.
+
+JSON API wrapper around [LanguageTool](https://languagetool.org/) with support for batching.
 
 ## API
 
